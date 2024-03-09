@@ -24,7 +24,6 @@ const hideMe = () => {
     for(let x = nav_items.length-1; x>=0; x--){
         nav_items[x].classList.remove('appear')
         nav_items[x].classList.add('base')
-        console.log(nav_items[x])
     }
 }
 

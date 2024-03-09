@@ -3,18 +3,16 @@ let inputs = document.querySelectorAll('input')
 const mycontainers = [document.getElementById('profile-container'),document.getElementById('welcome-container')]
 inputs = [...inputs].slice(1);
 let arr = [...photos].concat(inputs)
-console.log(arr)
 // reverse the array
 arr=[...arr].reverse()
 
 // blink function
 const blink =(arr,i,outcome)=>{
     const l = arr[i];
+    let label = l.previousSibling.previousSibling;
     setTimeout(()=>{
         arr[i].style=outcome;
-        if(l.length > 0){
-            arr[i].labels[0].style=outcome
-        }
+        label.style=outcome
     }, 95*(i+1))
 }
 // appear function
