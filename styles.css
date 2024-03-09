@@ -26,8 +26,26 @@ body{
     flex-direction: column;
     align-items:Center;
     transition:.5s;
-
 }
+
+
+.base{
+    transform:translate(0,-75px);
+    transition:.3s;
+    opacity:.5;
+}
+
+.hidden{
+    opacity:.25;
+    transition:.5s;
+    transform: translate(0,-75px)
+}
+.appear{
+    opacity:1;
+    transition:.5s;
+    transform: translate(0,0px)
+}
+
 #navigation-bar{
     height: 90px;
     width: 100%;
@@ -38,6 +56,7 @@ body{
 
 
 }
+
 .login{
     background:none;
     color:#fff;
@@ -51,14 +70,6 @@ body{
     right:10%;
 }
 
-.hidden{
-    opacity:.25;
-    transform: translate(0,-200px)
-}
-.appear{
-    opacity:1;
-    transform: translate(0,0px)
-}
 /* list-contaier */
 #list-container{
     display:Flex;
@@ -68,7 +79,7 @@ body{
 .space1{
     height:100vh;
     width:100%;
-    background:#333;
+    background:#969090;
 }
 .space2{
     height:100vh;
