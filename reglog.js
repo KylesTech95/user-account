@@ -1,5 +1,6 @@
 let photo = document.querySelector('.img-border')
 let inputs = document.querySelectorAll('input')
+const mycontainers = [document.getElementById('profile-container'),document.getElementById('welcome-container')]
 inputs = [...inputs].slice(1);
 let arr = [photo].concat(inputs)
 console.log(arr)
@@ -27,3 +28,30 @@ for(let i = arr.length-1; i >=0; i--){
 }
 }
 appear(arr)
+
+const contentDrop = () => {
+    if(mycontainers[0].classList.contains('hide-content')){
+        mycontainers.forEach(c=>{
+            c.classList.add('appear-content')
+            c.classList.remove('hide-content')
+        })
+    }
+
+}
+const contentHide = () => {
+    if(mycontainers[0].classList.contains('appear-content')){
+        mycontainers.forEach(c=>{
+            c.classList.remove('appear-content')
+            c.classList.add('hide-content')
+        })
+    }
+   
+}
+
+
+
+window.addEventListener('scroll',e=>{
+    // get scroll position for Y
+    let yPos = window.scrollY
+    return yPos <= window.innerHeight/3 ? contentDrop() : contentHide()
+})

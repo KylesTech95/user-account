@@ -17,7 +17,27 @@ body{
 .space1{
     height:100vh;
     width:100%;
-    background:#969090;
+    background-image:linear-gradient(30deg,#fff,#969090,#fff);
+}
+hr{
+    /* border:4px solid red; */
+    width:100%;
+    box-shadow: 0 30px 100px 30px purple;
+    transform:translate(0,-10px);
+    border:none;
+    animation: glowEffect 15s ease infinite alternate;
+}
+@keyframes glowEffect{
+    0%{
+        box-shadow: 0 30px 100px 30px purple;
+    }
+    50%{
+        box-shadow: 0 30px 50px 30px indigo;
+
+    }
+    100%{
+        box-shadow: 0 30px 100px 30px blue;
+    }
 }
 .pre-bod-container{
     background:#969090;
@@ -26,8 +46,9 @@ body{
     align-items: center;
     justify-content:space-around;
     height:inherit;
-    overflow:hidden;
+    overflow:auto;
     width:95%;
+    margin-bottom:2rem;
 }
 #navigation-bar-container{
     z-index:999;
@@ -49,14 +70,23 @@ body{
     transition:.3s;
     opacity:.5;
 }
-
+.hide-content{
+    opacity:0;
+    transition:.5s;
+    transform: translate(0,-275px)
+}
+.appear-content{
+    opacity:1;
+    transition:.5s;
+    transform: translate(0,0)
+}
 .hidden{
     opacity:.25;
     transition:.5s;
     transform: translate(0,-75px)
 }
 .appear{
-    opacity:1;
+    opacity:.88;
     transition:.5s;
     transform: translate(0,0px)
 }
