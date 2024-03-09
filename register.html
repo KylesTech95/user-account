@@ -18,32 +18,35 @@
     <title>Profile card</title>
 </head>
 <body>
-    <!-- register -->
-    <div class="pre-bod-container">
-        <div id="navigation-bar-container" class=" base close open whatever">
-
-            <nav id="navigation-bar">
-                <ul id="list-container">
-                    <li class="list-item hidden">About</li>
-                    <li class="list-item hidden">Products</li>
-                    <li class="list-item hidden">Stories</li>
-                    <li class="list-item hidden">Contact</li>
-                </ul>
-                <!-- Links to login & register -->
-                <a href="register.html#loginRef" class="login">
-                    <span class="material-symbols-outlined login login-icon icon-login">
-                        passkey
-                        </span>
-                </a>
-                
-                <a href="register.html" class="register">
-                    <span class="material-symbols-outlined edit note edit-note note-edit">
-                    edit_note
+    <!--navigation-->
+    <div id="navigation-bar-container" class=" base close open whatever">
+        <!--navigation bar-->
+        <nav id="navigation-bar">
+            <ul id="list-container">
+                <li class="list-item hidden">About</li>
+                <li class="list-item hidden">Products</li>
+                <li class="list-item hidden">Stories</li>
+                <li class="list-item hidden">Contact</li>
+            </ul>
+            <!-- Links to login & register -->
+            <a href="register.html#loginRef" class="login">
+                <span class="material-symbols-outlined login login-icon icon-login">
+                    passkey
                     </span>
-                </a>
+            </a>
+            
+            <a href="register.html" class="register">
+                <span class="material-symbols-outlined edit note edit-note note-edit">
+                edit_note
+                </span>
+            </a>
+    
+        </nav>
+    </div>
+<!--___________________________________________________-->
+    <!-- register -->
+    <div class="pre-bod-container" id="registerRef">
         
-            </nav>
-        </div>
         <!--welcome-->
         <div id="welcome-container" class="appear-content">
             <h2 id="welcome-title">User-Registration</h2>
@@ -123,8 +126,74 @@
 
     </div>
     <hr>
+<!--___________________________________________________-->
     <!-- login -->
-    <section id="loginRef" class="space1"></section>
+    <div class="pre-bod-container2" id="loginRef">
+        
+        <!--welcome-->
+        <div id="welcome-container2" class="appear-content">
+            <h2 id="welcome-title">User-Registration</h2>
+            <p class="welcome-paragraph">If you are a member of this website, please <b>Login</b></p>
+            <p class="welcome-paragraph">If you are not a member...</p>
+            <a id="welcome-register-btn" class="welcome-register" href="#registerRef" onclick="preventDef()">Register</a>
+        </div>
+        <!--profile card-->
+    
+        <div id="profile-container2" class="appear-content">
+    
+            <!--card-back-->
+            <div class="card card-back"></div>
+            <!--Card middle-->
+            <div class="card card-mid"></div>
+            <!--card-front-->
+            <div class="card card-front"></div>
+    
+            <div class="card card-info">
+                <!--profile pic-->
+                <div id="profile-picture2" class="picture img">
+                    <label for="file"id="file-label" class="label">Upload picture</label>
+                    <input type="file" name="file" id="file2">
+                    <div class="img-border">
+                        <img src="https://github.com/KylesTech95/profile-card/blob/main/media/profile.jpg?raw=true" height="200" width="200" name="file" alt="profile-default" id="image" class="img-actual-uploaded">
+                    </div>
+                </div>
+    
+                <!--user information-->
+                <div id="user-info" class="info userinfo">
+                    <!--username-->
+                    <div class="username-container">
+                        <label for="username" class="label">Username</label>
+                        <input class="open" type="text" name="username" id="username" required placeholder="jDoe123">
+                        <h3 class="close" id="username" class="username uname user-name"></h3>
+                    </div>
+                    
+                    <!--email-->
+                    <div class="email-container">
+                        <label for="email" class="label">email</label>
+                        <input class="open" type="email" name="email" id="email" required placeholder="jdawg45@fake.email">
+                        <h3 class="close" id="email-text" class="email"></h3>
+                    </div>
+                    <!--password-->
+                    <div class="password-container">
+                        <label for="password" class="label">password</label>
+                        <input class="open" type="password" name="password" id="password" required placeholder="jdawg45@fake.password">
+                        <h3 class="close" id="password-text" class="password"></h3>
+                    </div>
+                    
+                </div>
+                <!--contact info-->
+                <div id="contact-info" class="contact contact-info cinfo">
+                    <phone id="phone" class="phonenumber number cell phone-number"></phone>
+                    <address id="address" class="address addy location loca addr"></address>
+                </div>
+                <input class="open" type="submit" id="submit" value="Create Account"/>
+            </form>
+            </div>
+    
+          
+        </div>
+
+    </div>
 
 </body>
 <script src="reglog.js"></script>
