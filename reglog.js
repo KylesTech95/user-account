@@ -1,8 +1,8 @@
-let photo = document.querySelector('.img-border')
+let photos = document.querySelectorAll('.img-border')
 let inputs = document.querySelectorAll('input')
 const mycontainers = [document.getElementById('profile-container'),document.getElementById('welcome-container')]
 inputs = [...inputs].slice(1);
-let arr = [photo].concat(inputs)
+let arr = [...photos].concat(inputs)
 console.log(arr)
 // reverse the array
 arr=[...arr].reverse()

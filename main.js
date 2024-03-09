@@ -1,5 +1,6 @@
 const navigation = document.getElementById('navigation-bar-container');
 const nav_items = document.querySelectorAll('.list-item')
+
 const dropDown = () => {
     if(navigation.classList.contains('base')){
         navigation.classList.add('appear')
@@ -26,8 +27,6 @@ const hideMe = () => {
         console.log(nav_items[x])
     }
 }
-
-
 
 window.addEventListener('scroll',e=>{
     // get scroll position for Y
