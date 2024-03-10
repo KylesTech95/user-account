@@ -3,6 +3,7 @@
     padding:0;
     box-sizing:border-box;
     list-style-type:none;
+    text-decoration:none;
 }
 
 body{
@@ -67,18 +68,24 @@ body{
     margin-left:2rem; 
     width:100%;
 }
-.list-item{
+.list-item,.list-item>a{
     font-family: "Nunito Sans", sans-serif;
     color:#fff;
     padding: 1.5rem 2rem;
     font-size:22px;
     transition:.3s;
-    background:none;   
-    text-align:center;
+    background:none; 
 }
-.list-item:hover{
+
+.list-item:hover
+{
     transition:.25s;
     background:#fff;
+    color:indigo;
+    cursor:pointer;
+}
+.list-item>a:hover{
+    transition:.25s;
     color:indigo;
     cursor:pointer;
 }
@@ -126,24 +133,23 @@ body{
 hr{
     /* border:4px solid red; */
     width:100%;
-    box-shadow: 0 30px 100px 30px purple;
+    box-shadow: 0 30px 20px 10px purple;
     transform:translate(0,-10px);
     border:none;
-    animation: glowEffect 15s ease infinite alternate;
-    margin-bottom:2rem;
-    margin-top:2rem;
+    animation: glowEffect 12s ease infinite alternate;
+  
 
 }
 @keyframes glowEffect{
     0%{
-        box-shadow: 0 30px 100px 30px purple;
+        box-shadow: 0 30px 20px 10px purple;
     }
     50%{
-        box-shadow: 0 30px 50px 30px indigo;
+        box-shadow: 0 30px 20px 12px indigo;
 
     }
     100%{
-        box-shadow: 0 30px 100px 30px blue;
+        box-shadow: 0 30px 20px 10px rgb(91, 39, 181);
     }
 }
 /*Horizonal Line with glowing @keyframe above*/

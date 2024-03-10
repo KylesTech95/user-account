@@ -1,8 +1,9 @@
 let photos = document.querySelectorAll('.img-border')
 let inputs = document.querySelectorAll('input')
+const pre_bod_container = document.querySelector('.pre-bod-container')
 const mycontainers = [document.getElementById('profile-container'),document.getElementById('welcome-container')]
 const mycontainers2 = [document.getElementById('profile-container2'),document.getElementById('welcome-container2')]
-
+const body = document.querySelector('body')
 inputs = [...inputs].slice(1);
 let arr = [...photos].concat(inputs)
 // reverse the array
@@ -68,10 +69,15 @@ const contentHide2 = () => {
 
 
 window.addEventListener('scroll',e=>{
+    let top = pre_bod_container.getBoundingClientRect().y+pre_bod_container.getBoundingClientRect().height
     // get scroll position for Y
     let yPos = window.scrollY
-    // return yPos <= window.innerHeight/3 ? contentDrop() : contentHide()
-    if(yPos <= window.innerHeight/3){
+
+    // if scroll Position is greater than, or equal to, .pre-bod-container's y-position(from bottom)
+    // display top content
+    // else
+    // display bottom content
+    if(yPos <= top){
         contentDrop()
         contentHide2()
     }

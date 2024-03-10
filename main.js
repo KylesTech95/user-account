@@ -34,18 +34,19 @@ window.addEventListener('scroll',e=>{
 })
 window.addEventListener('click',e=>{
     // get scroll position for Y
-    if(e.target.parentElement!==navigation){
+    console.log(e.target)
+    if(/space|hr/g.test(e.target.classList[0])){
         navigation.classList.add('base')
         navigation.classList.remove('appear')
     }
 })
-window.addEventListener('touchstart',e=>{
-    // get scroll position for Y
-    if(e.target.parentElement!==navigation){
-        navigation.classList.add('base')
-        navigation.classList.remove('appear')
-    }
-})
+// window.addEventListener('touchstart',e=>{
+//     // get scroll position for Y
+//     if(e.target.parentElement!==navigation&&nav_items.forEach((n,i)=>e.target.parentElement!==n)){
+//         navigation.classList.add('base')
+//         navigation.classList.remove('appear')
+//     }
+// })
 
 // //click base
 const clickBaseNav=()=>{
