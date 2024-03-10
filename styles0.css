@@ -470,6 +470,6 @@ form{
         
     }
     .pre-bod-container2{
-        flex-direction:column-reverse;
+        flex-direction:column;
     }
 }
