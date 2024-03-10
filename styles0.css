@@ -577,8 +577,8 @@ form{
         gap:4rem;
     }
     #navigation-bar-container{
-        max-height:none;
-        min-height:none;
+        max-height:25%;
+        min-height:100%;
         height:100%;
         /* height:100vh; */   
              

@@ -39,6 +39,13 @@ window.addEventListener('click',e=>{
         navigation.classList.remove('appear')
     }
 })
+window.addEventListener('touchstart',e=>{
+    // get scroll position for Y
+    if(e.target.parentElement!==navigation){
+        navigation.classList.add('base')
+        navigation.classList.remove('appear')
+    }
+})
 
 // //click base
 const clickBaseNav=()=>{
