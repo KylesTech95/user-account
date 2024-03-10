@@ -467,9 +467,13 @@ form{
     }
     .pre-bod-container{
         flex-direction:column;
+        margin-bottom:2rem;
+        transform:scale(.85);
         
     }
     .pre-bod-container2{
+        margin-top: 2rem;
+        transform:scale(.85);
         flex-direction:column;
     }
 }
