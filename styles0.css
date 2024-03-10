@@ -34,6 +34,7 @@ body{
     transform:translate(0,-75px);
     transition:.3s;
     opacity:.5;
+    cursor:pointer;
 }
 .hidden{
     opacity:.25;
@@ -143,6 +144,11 @@ hr{
     opacity:0;
     transition:.5s;
     transform: translate(0,-275px)
+}
+.hide-content-down{
+    opacity:0;
+    transition:.5s;
+    transform: translate(0,275px)
 }
 .appear-content{
     opacity:1;
@@ -294,7 +300,8 @@ display:flex;
     }
 }
 
-#profile-container{
+#profile-container,
+#profile-container2{
     transform: scale(.85);
     height:575px;
     width:100%;

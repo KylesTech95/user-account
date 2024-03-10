@@ -32,3 +32,12 @@ window.addEventListener('scroll',e=>{
     let yPos = window.scrollY
     return yPos > 50 ? dropDown() : hideMe()
 })
+
+// //click base
+// const clickBaseNav=()=>{
+//     if(navigation.classList.contains('base')){
+//         navigation.addEventListener('click',e=>{
+//             e.target.classList.remove('base')
+//         })
+//     }
+// }
