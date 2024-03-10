@@ -613,4 +613,8 @@ form{
         opacity:.5;
         cursor:pointer;
     }
+    .edit-note,
+    .login{
+    bottom:5%;
+    }
 }
