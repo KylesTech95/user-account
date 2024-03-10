@@ -465,4 +465,11 @@ form{
     .img-border{
         margin-bottom:.75rem;
     }
+    .pre-bod-container{
+        flex-direction:column;
+        
+    }
+    .pre-bod-container2{
+        flex-direction:column-reverse;
+    }
 }
