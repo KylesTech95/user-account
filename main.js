@@ -34,10 +34,15 @@ window.addEventListener('scroll',e=>{
 })
 
 // //click base
-// const clickBaseNav=()=>{
-//     if(navigation.classList.contains('base')){
-//         navigation.addEventListener('click',e=>{
-//             e.target.classList.remove('base')
-//         })
-//     }
-// }
+const clickBaseNav=()=>{
+    if(navigation.classList.contains('base')){
+        console.log(true)
+        navigation.addEventListener('click',e=>{
+            let nav = e.currentTarget
+            nav.classList.remove('base')
+            nav.classList.add('appear')
+            
+        })
+    }
+}
+clickBaseNav()
