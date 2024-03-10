@@ -40,15 +40,9 @@ window.addEventListener('click',e=>{
         navigation.classList.remove('appear')
     }
 })
-// window.addEventListener('touchstart',e=>{
-//     // get scroll position for Y
-//     if(e.target.parentElement!==navigation&&nav_items.forEach((n,i)=>e.target.parentElement!==n)){
-//         navigation.classList.add('base')
-//         navigation.classList.remove('appear')
-//     }
-// })
 
-// //click base
+
+//click base
 const clickBaseNav=()=>{
     if(navigation.classList.contains('base')){
         navigation.addEventListener('click',e=>{
@@ -58,7 +52,3 @@ const clickBaseNav=()=>{
 
 }
 clickBaseNav()
-// if(!desktopView()){
-//     navigation.classList.remove('base')
-//     navigation.classList.remove('appear')
-// }
