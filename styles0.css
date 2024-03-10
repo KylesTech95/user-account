@@ -461,13 +461,13 @@ form{
 @media screen and (max-width:400px) and (max-height:900px){
     .card-info{
         transform:scale(.9)
-    }
     .img-border{
         margin-bottom:.75rem;
     }
     .pre-bod-container{
         flex-direction:column;
         margin-bottom:2rem;
+        margin-top:2rem;
         transform:scale(.85);
         
     }
