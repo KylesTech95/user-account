@@ -30,21 +30,27 @@ const hideMe = () => {
 window.addEventListener('scroll',e=>{
     // get scroll position for Y
     let yPos = window.scrollY
-    return (yPos > 0)&&desktopView() ? dropDown() : hideMe()
+    return (yPos > 0) ? dropDown() : hideMe()
+})
+window.addEventListener('click',e=>{
+    // get scroll position for Y
+    if(e.target.parentElement!==navigation){
+        navigation.classList.add('base')
+        navigation.classList.remove('appear')
+    }
 })
 
 // //click base
 const clickBaseNav=()=>{
-    if(navigation.classList.contains('base')&&desktopView()){
+    if(navigation.classList.contains('base')){
         navigation.addEventListener('click',e=>{
             dropDown()
-            console.log(e.currentTarget)
         })
     }
 
 }
 clickBaseNav()
-if(!desktopView()){
-    navigation.classList.remove('base')
-    navigation.classList.remove('appear')
-}
+// if(!desktopView()){
+//     navigation.classList.remove('base')
+//     navigation.classList.remove('appear')
+// }
