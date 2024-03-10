@@ -279,12 +279,23 @@ display:flex;
  #welcome-container2>h2{
     font-family: "Madimi One", sans-serif;
  }
- .welcome-login{
+ .welcome-login,
+ .welcome-register{
     padding:.5rem 1rem;
     border-radius:12px;
     border:none;
     transition:.5s;
+    text-decoration: none;
+    color:#fff;
  }
+ #submit:hover,
+.welcome-login:hover,
+.welcome-register:hover{
+    color:#fff;
+    background:#333;
+    transition:.75s;
+    cursor:pointer;
+    }
  #welcome-container,
  #welcome-container2{
     font-size:20px;
@@ -449,13 +460,7 @@ input,label,.img-border{
     transition:.5s;
     background:#fff;
 }
-#submit:hover,
-.welcome-login:hover{
-    color:#fff;
-    background:#333;
-    transition:.75s;
-    cursor:pointer;
-    }
+
 form{
     display:flex;
     flex-direction: column;
@@ -470,7 +475,7 @@ form{
  
 /* Tablet mobile */
 /* portrait mobile */
-@media screen and (max-width:820px) and (max-height:1280px){
+@media screen and (max-width:885px) and (max-height:1280px){
     .card-info{
         transform:scale(.9)
     }
@@ -555,7 +560,15 @@ form{
             box-shadow: 0 10px 50px 1cqw blue;
         }
     }
-    
+    #welcome-container,
+    #welcome-container2{
+        width:75%;
+        text-align:center;
+    }
+    #welcome-container>h2,
+    #welcome-container2>h2{
+        color:ghostWhite;
+    }
 }
 
 /* portrait mobile */
@@ -617,4 +630,5 @@ form{
     .login{
     bottom:5%;
     }
+    
 }
