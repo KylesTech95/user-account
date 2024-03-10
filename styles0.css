@@ -529,7 +529,7 @@ form{
     }
     .edit-note,
     .login{
-    bottom:10%;
+    bottom:5%;
     }
     .edit-note{
         left:15px;
@@ -569,7 +569,7 @@ form{
     .pre-bod-container{
         flex-direction:column;
         margin-bottom:2rem;
-        margin-top:1rem;
+        margin-top:0;
         transform:scale(.85);
         gap:3rem;
         position:relative;
