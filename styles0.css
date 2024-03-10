@@ -36,6 +36,10 @@ body{
     opacity:.5;
     cursor:pointer;
 }
+.base:hover{
+    opacity:1;
+    transition:25s;
+    }
 .hidden{
     opacity:.25;
     transition:.5s;
