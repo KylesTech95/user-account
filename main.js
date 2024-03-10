@@ -1,6 +1,6 @@
 const navigation = document.getElementById('navigation-bar-container');
 const nav_items = document.querySelectorAll('.list-item')
-
+const desktopView = () => window.innerWidth >= 400
 const dropDown = () => {
     if(navigation.classList.contains('base')){
         navigation.classList.add('appear')
@@ -30,19 +30,21 @@ const hideMe = () => {
 window.addEventListener('scroll',e=>{
     // get scroll position for Y
     let yPos = window.scrollY
-    return yPos > 50 ? dropDown() : hideMe()
+    return (yPos > 0)&&desktopView() ? dropDown() : hideMe()
 })
 
 // //click base
 const clickBaseNav=()=>{
-    if(navigation.classList.contains('base')){
-        console.log(true)
+    if(navigation.classList.contains('base')&&desktopView()){
         navigation.addEventListener('click',e=>{
-            let nav = e.currentTarget
-            nav.classList.remove('base')
-            nav.classList.add('appear')
-            
+            dropDown()
+            console.log(e.currentTarget)
         })
     }
+
 }
 clickBaseNav()
+if(!desktopView()){
+    navigation.classList.remove('base')
+    navigation.classList.remove('appear')
+}
