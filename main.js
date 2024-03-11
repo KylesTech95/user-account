@@ -75,22 +75,26 @@ const contentHide = () => {
    
 }
 
-window.addEventListener('scroll',e=>{
-    let top = space2.getBoundingClientRect().y
-    // get scroll position for Y
-    let yPos = window.scrollY
+// if the pathname includes "index", then execute event listener
+if(/index/g.test(window.location.pathname)){
+    window.addEventListener('scroll',e=>{
+        let top = space2.getBoundingClientRect().y
+        // get scroll position for Y
+        let yPos = window.scrollY
+    
+        // if scroll Position is greater than, or equal to, .pre-bod-container's y-position(from bottom)
+        // display top content
+        // else
+        // display bottom content
+        if(yPos >= top){
+            console.log('test passo n scroll')
+            contentHide()
+        }
+        else{
+            contentDrop()
+        }
+    })
+}
 
-    // if scroll Position is greater than, or equal to, .pre-bod-container's y-position(from bottom)
-    // display top content
-    // else
-    // display bottom content
-    if(yPos >= top){
-        console.log('test passo n scroll')
-        contentHide()
-    }
-    else{
-        contentDrop()
-    }
-})
 
 

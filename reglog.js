@@ -31,7 +31,7 @@ for(let i = arr.length-1; i >=0; i--){
 }
 appear(arr)
 
-const contentDrop = () => {
+const contentDropReg = () => {
     if(mycontainers[0].classList.contains('hide-content')){
         mycontainers.forEach(c=>{
             c.classList.add('appear-content')
@@ -49,7 +49,7 @@ const contentDrop2 = () => {
     }
 
 }
-const contentHide = () => {
+const contentHideReg = () => {
     if(mycontainers[0].classList.contains('appear-content')){
         mycontainers.forEach(c=>{
             c.classList.remove('appear-content')
@@ -78,11 +78,11 @@ window.addEventListener('scroll',e=>{
     // else
     // display bottom content
     if(yPos <= top){
-        contentDrop()
+        contentDropReg()
         contentHide2()
     }
     else{
         contentDrop2()
-        contentHide()
+        contentHideReg()
     }
 })
