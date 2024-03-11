@@ -155,6 +155,16 @@ figure>img{
     height:300px;
     width:300px;
     border-radius:12px;
+    transition: .3s;
+
+}
+figure{
+transition: .3s;
+}
+figure>img:hover{
+    transition: .3s;
+    transform: scale(1.05);
+    cursor:pointer; 
 }
 figure>{
     display:flex;

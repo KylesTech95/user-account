@@ -113,5 +113,16 @@ if(/index/g.test(window.location.pathname)){
     })
 }
 
+// figcaptions change color while hovering over figure image
+const figLabelGlow = () => {
+    let fig = document.querySelectorAll('figure')
 
-
+    fig.forEach(f=>{
+        f.addEventListener('mouseover',e=>{
+            let figCap = e.currentTarget.children[1];
+            console.log(figCap)
+        })
+    })
+    
+}
+figLabelGlow()
