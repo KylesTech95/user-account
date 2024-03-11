@@ -178,6 +178,8 @@ figure>figcaption{
     text-align: center;
     padding:.5rem 1rem;
     border-radius:12px;
+    transition:.25s;
+    cursor:pointer;
         font-family: "Nunito Sans", sans-serif;
 }
 #products-container>h3{
@@ -249,6 +251,18 @@ figure>figcaption{
     .img-border{
         margin-bottom:.75rem;
     }
+    figure>img{
+        height:175px;
+        width:175px;
+    }
+    
+    #products-actual-container{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:1rem;
+    }
+   
     .pre-bod-container{
         flex-direction:column;
         margin-bottom:2rem;
@@ -256,7 +270,8 @@ figure>figcaption{
         transform:scale(.85);
         gap:3rem;
         position:relative;
-
+        gap:0;
+        
     }
     .pre-bod-container2{
         margin-top: 2rem;

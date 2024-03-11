@@ -120,7 +120,13 @@ const figLabelGlow = () => {
     fig.forEach(f=>{
         f.addEventListener('mouseover',e=>{
             let figCap = e.currentTarget.children[1];
-            console.log(figCap)
+            figCap.style='background:#fff;color:indigo;transform:scale(.95);'
+        })
+    })
+    fig.forEach(f=>{
+        f.addEventListener('mouseout',e=>{
+            let figCap = e.currentTarget.children[1];
+            figCap.style='background:none;color:#000;'
         })
     })
     
