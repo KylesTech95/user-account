@@ -1,6 +1,6 @@
 const navigation = document.getElementById('navigation-bar-container');
 const nav_items = document.querySelectorAll('.list-item')
-const desktopView = () => window.innerWidth >= 400
+
 const dropDown = () => {
     if(navigation.classList.contains('base')){
         navigation.classList.add('appear')
@@ -44,7 +44,6 @@ window.addEventListener('click',e=>{
     }
 })
 
-
 //click base
 const clickBaseNav=()=>{
     if(navigation.classList.contains('base')){
@@ -55,3 +54,6 @@ const clickBaseNav=()=>{
 
 }
 clickBaseNav()
+
+
+
