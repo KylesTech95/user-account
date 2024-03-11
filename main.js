@@ -1,5 +1,7 @@
 const navigation = document.getElementById('navigation-bar-container');
 const nav_items = document.querySelectorAll('.list-item')
+const about_container = document.querySelector('#about-container')
+const space2 = document.querySelector('.space2')
 
 const dropDown = () => {
     if(navigation.classList.contains('base')){
@@ -55,5 +57,40 @@ const clickBaseNav=()=>{
 }
 clickBaseNav()
 
+
+// hide and appear content
+const contentDrop = () => {
+    if(about_container.classList.contains('hide-content')){
+        about_container.classList.add('appear-content')
+        about_container.classList.remove('hide-content')
+    }
+
+}
+
+const contentHide = () => {
+    if(about_container.classList.contains('appear-content')){
+        about_container.classList.remove('appear-content')
+        about_container.classList.add('hide-content')
+    }
+   
+}
+
+window.addEventListener('scroll',e=>{
+    let top = space2.getBoundingClientRect().y
+    // get scroll position for Y
+    let yPos = window.scrollY
+
+    // if scroll Position is greater than, or equal to, .pre-bod-container's y-position(from bottom)
+    // display top content
+    // else
+    // display bottom content
+    if(yPos >= top){
+        console.log('test passo n scroll')
+        contentHide()
+    }
+    else{
+        contentDrop()
+    }
+})
 
 

@@ -145,6 +145,23 @@ hr{
     height:100vh;
     width:100%;
 }
+/* Hide content/Appear content below*/
+.hide-content{
+    opacity:0;
+    transition:.5s;
+    transform: translate(0,-275px)
+}
+.hide-content-down{
+    opacity:0;
+    transition:.5s;
+    transform: translate(0,275px)
+}
+.appear-content{
+    opacity:1;
+    transition:.5s;
+    transform: translate(0,0)
+}
+/* Hide content/Appear content above*/
 
 .list-item,.list-item>a{
     font-family: "Nunito Sans", sans-serif;
