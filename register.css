@@ -534,6 +534,9 @@ form{
         width:100%;
         
     }
+    .list-item>a{
+        font-size:14px;
+    }
     .edit-note,
     .login{
     bottom:5%;

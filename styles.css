@@ -194,7 +194,6 @@ hr{
 
     }
     .list-item{
-        font-size:16px;
         /* padding:1.5rem 3rem; */
         display:flex;
         flex-direction:column;
@@ -202,6 +201,9 @@ hr{
         justify-content:Center;
         width:100%;
         
+    }
+    .list-item>a{
+        font-size:14px;
     }
     .edit-note,
     .login{

@@ -4,6 +4,7 @@ const pre_bod_container = document.querySelector('.pre-bod-container')
 const mycontainers = [document.getElementById('profile-container'),document.getElementById('welcome-container')]
 const mycontainers2 = [document.getElementById('profile-container2'),document.getElementById('welcome-container2')]
 const body = document.querySelector('body')
+const navigation2 = document.getElementById('navigation-bar-container')
 inputs = [...inputs].slice(1);
 let arr = [...photos].concat(inputs)
 // reverse the array
@@ -66,8 +67,7 @@ const contentHide2 = () => {
     }
 }
 
-
-
+// Window event listeneres
 window.addEventListener('scroll',e=>{
     let top = pre_bod_container.getBoundingClientRect().y+pre_bod_container.getBoundingClientRect().height
     // get scroll position for Y

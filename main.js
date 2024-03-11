@@ -32,10 +32,13 @@ window.addEventListener('scroll',e=>{
     let yPos = window.scrollY
     return (yPos > 0) ? dropDown() : hideMe()
 })
+// function for hiding the navigation bar
+const iDoNotSelectNavigation = (e) => {
+    return /space|hr|pre-bod-container/g.test(e.target.classList[0])||/profile-container/g.test(e.target.id)
+}
 window.addEventListener('click',e=>{
     // get scroll position for Y
-    console.log(e.target)
-    if(/space|hr/g.test(e.target.classList[0])){
+    if(iDoNotSelectNavigation(e)){
         navigation.classList.add('base')
         navigation.classList.remove('appear')
     }
