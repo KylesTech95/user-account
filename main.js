@@ -1,6 +1,7 @@
 const navigation = document.getElementById('navigation-bar-container');
 const nav_items = document.querySelectorAll('.list-item')
 const about_container = document.querySelector('#about-container')
+const products_container = document.querySelector('#products-container')
 const space2 = document.querySelector('.space2')
 
 const dropDown = () => {
@@ -74,6 +75,20 @@ const contentHide = () => {
     }
    
 }
+const contentDrop2Index = () => {
+    if(products_container.classList.contains('hide-content-down')){
+        products_container.classList.add('appear-content')
+        products_container.classList.remove('hide-content-down')
+    }
+
+}
+const contentHide2Index = () => {
+    if(products_container.classList.contains('appear-content')){
+        products_container.classList.remove('appear-content')
+        products_container.classList.add('hide-content-down')
+    }
+   
+}
 
 // if the pathname includes "index", then execute event listener
 if(/index/g.test(window.location.pathname)){
@@ -89,9 +104,11 @@ if(/index/g.test(window.location.pathname)){
         if(yPos >= top){
             console.log('test passo n scroll')
             contentHide()
+            contentDrop2Index()
         }
         else{
             contentDrop()
+            contentHide2Index()
         }
     })
 }
