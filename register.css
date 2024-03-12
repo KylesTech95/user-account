@@ -535,6 +535,10 @@ form{
         position:relative;
 
     }
+    .pre-bod-container,
+    .pre-bod-container2{
+        align-items: end;
+    }
     .pre-bod-container2{
         margin-top: 2rem;
         transform:scale(.85);

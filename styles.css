@@ -389,6 +389,10 @@ figure>figcaption{
             box-shadow: 0 10px 50px 1cqw blue;
         }
     }
+    .space1,
+    .space2{
+        align-items: end;
+    }
     
 }
 
