@@ -287,7 +287,20 @@ justify-content: center;
 width:inherit;
 display:flex;
 justify-content: center;
-align-items: space-evenly;
+align-items: center;
+}
+.contact-list-container>li{
+transform:scale(.5)
+}
+.contact-list-container>li>a>img{
+background:none;
+border-radius:50%;
+transition:.3s;
+}
+.contact-list-container>li>a>img:hover{
+transition:.3s;
+background:purple;
+opacity:.8;
 }
 .img-border{
     top:-50px;
