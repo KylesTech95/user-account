@@ -91,7 +91,7 @@ const contentHide2Index = () => {
 }
 
 // if the pathname includes "index", then execute event listener
-if(/index/g.test(window.location.pathname)){
+if(/index|user-account/g.test(window.location.pathname)){
     window.addEventListener('scroll',e=>{
         let top = space2.getBoundingClientRect().y
         // get scroll position for Y
