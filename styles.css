@@ -125,7 +125,7 @@ hr{
     box-shadow: inset 0 0 5px 1rem indigo;
     border:none;
     border-radius: 8px;
-    height:50%;
+    height:75%;
     display:flex;
     flex-direction: column;
     align-items:center;
@@ -256,8 +256,11 @@ figure>figcaption{
         height:175px;
         width:175px;
     }
-    
+    #products-cotainer{
+        height:100px;
+    }
     #products-actual-container{
+        
         flex-direction:column;
         justify-content:center;
         align-items:center;
